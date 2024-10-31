@@ -1,0 +1,12 @@
+package awt.droolz.rule;
+
+import awt.droolz.dto.Person;
+
+dialect "java"
+
+rule "print"
+  when
+    Person(name : firstName, surname : lastName)
+  then
+    System.out.println("Hello" + " " + name + " " + surname + "!");
+end
